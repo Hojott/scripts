@@ -1,0 +1,136 @@
+comment_char %
+escape_char /
+
+% Finglish locale for Finland
+% for Finnish natives who prefer English
+
+LC_IDENTIFICATION
+title	   "English locale for Finland"
+source	   "Kussi"
+address	   ""
+contact	   ""
+email	   "sakkenino@gmail.com"
+tel	   ""
+fax	   ""
+language   "Finnish English"
+territory  "Finland"
+revision   "1.0"
+date	   "2022-12-11"
+
+category "i18n:2012";LC_IDENTIFICATION
+category "i18n:2012";LC_CTYPE
+category "i18n:2012";LC_COLLATE
+category "i18n:2012";LC_TIME
+category "i18n:2012";LC_NUMERIC
+category "i18n:2012";LC_MONETARY
+category "i18n:2012";LC_MESSAGES
+category "i18n:2012";LC_PAPER
+category "i18n:2012";LC_MEASUREMENT
+category "i18n:2012";LC_NAME
+category "i18n:2012";LC_ADDRESS
+category "i18n:2012";LC_TELEPHONE
+END LC_IDENTIFICATION
+
+
+LC_CTYPE
+% copy "fi_FI"
+copy "en_US"
+END LC_CTYPE
+
+
+LC_COLLATE
+copy "en_US"
+END LC_COLLATE
+
+
+LC_MONETARY
+copy "fi_FI"
+END LC_MONETARY
+
+
+LC_NUMERIC
+copy "fi_FI"
+END LC_NUMERIC
+
+
+LC_TIME
+% copied en_US
+abday   "Sun";"Mon";"Tue";"Wed";"Thu";"Fri";"Sat"
+day     "Sunday";/
+        "Monday";/
+        "Tuesday";/
+        "Wednesday";/
+        "Thursday";/
+        "Friday";/
+        "Saturday"
+abmon   "Jan";"Feb";/
+        "Mar";"Apr";/
+        "May";"Jun";/
+        "Jul";"Aug";/
+        "Sep";"Oct";/
+        "Nov";"Dec"
+mon     "January";/
+        "February";/
+        "March";/
+	"April";/
+        "May";/
+        "June";/
+        "July";/
+        "August";/
+        "September";/
+        "October";/
+        "November";/
+        "December"
+
+% copied fi_FI
+d_t_fmt	   	"%a %e. %Bta %Y %H.%M.%S"
+d_fmt	   	"%d.%m.%Y"
+t_fmt	   	"%H.%M.%S"
+am_pm	   	"";""
+t_fmt_ampm 	""
+date_fmt   	"%a %-d.%-m.%Y %H.%M.%S %z"
+week       	7;19971130;4
+first_weekday	2
+END LC_TIME
+
+
+LC_MESSAGES
+copy "en_US"
+END LC_MESSAGES
+
+
+LC_PAPER
+copy "fi_FI"
+END LC_PAPER
+
+
+LC_TELEPHONE
+copy "fi_FI"
+END LC_TELEPHONE
+
+
+LC_MEASUREMENT
+copy "fi_FI"
+END LC_MEASUREMENT
+
+
+LC_NAME
+copy "fi_FI"
+END LC_NAME
+
+
+LC_ADDRESS
+postal_fmt   	"%f%N%d%N%b%N%a%N%s %h%t%e%t%r%N%z %T%N%c%N"
+country_ab2 	"FI"
+country_ab3 	"FIN"
+country_num 	246
+country_name 	"Finland"
+country_post 	"FI"
+country_car  	"FIN"
+country_isbn 	952
+
+lang_name	"English"
+lang_ab      	"en"
+lang_term    	"eng"
+lang_lib    	"eng"
+END LC_ADDRESS
