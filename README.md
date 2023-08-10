@@ -8,3 +8,6 @@ A locale for English in Finland. Basically made for Finns who want their compute
 ## backups
 A Bash script to backup needed files into .zip, possibly encrypted. While it works, it doesn't perfectly adhere to standards.
 
+## sysv
+Wrapper for sv that adds linking services. Doesn't really adhere to standards :D
+

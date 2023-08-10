@@ -8,10 +8,7 @@ CU='\033[0;32m' # Colour for Update (green)
 CC='\033[0;31m' # Colour for Crypted (red)
 NC='\033[0m' # No Colour
 
-#source $XDG_CONFIG_HOME/backups.conf
-# At this point I was too exhausted to start investigating why I don't have that set
-source $HOME/.config/backups.conf
-
+[[ -v $XDG_CONFIG_HOME ]] && source $XDG_CONFIG_HOME/backups.conf || source $HOME/.config/backups.conf
 
 
 read -sp "password: " passwd && printf "\n"

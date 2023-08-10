@@ -1,0 +1,40 @@
+#!/bin/sh
+
+if [ $1 = enable ] ; then
+	# Enable service
+
+	# Get command flags
+	starts_now=false
+
+	while getopts n: flag
+	do
+		case "${flag}" in
+			# Start service immediatly
+			n) starts_now=true;;
+		esac
+	done
+
+	# Create a symbolic link for services
+	ln -s /etc/sv/$2 /var/service \
+		&& echo "ln -s /etc/sv/$2 /var/service"
+
+	[ $starts_now = true ] && sv up $2 \
+		&& echo "sv up $1"
+
+elif [ $1 = disable ]; then
+	# Disable service
+	unlink /var/service/$2 \
+		&& echo "unlink /var/service/$2"
+
+elif [ $1 = list ] ; then
+	# List services
+	
+	# List all available
+	[ $2 = all ] && ls /etc/sv
+
+	[ $2 = enabled ] && ls /var/service
+
+else
+	# Pass to sv
+	sv $@
+fi
